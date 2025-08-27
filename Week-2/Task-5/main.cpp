@@ -32,10 +32,11 @@ void display() {
 	glVertex2f(0.8f, 0.5f);
 	glEnd();
 
-
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     glBegin(GL_QUADS);              // Each set of 4 vertices form a quad
-	glColor3f(1.0f, 0.0f, 0.0f); // Red
+    glColor4f(1.0f, 0.0f, 0.0f, 0.2f); // red with 50% transparency
 
 	glVertex2f(-0.8f, 0.8f);    // x, y
 	glVertex2f(-0.2f, 0.8f);
